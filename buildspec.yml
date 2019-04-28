@@ -1,0 +1,12 @@
+version: 0.1
+parameter-store:
+  DEPLOY_KEY: "git-vanity"
+phases:
+  install:
+    commands:
+      - pip install github-vanity
+  build:
+    commands:
+      - ./bin/vanme.sh
+  post_build:
+    commands:
